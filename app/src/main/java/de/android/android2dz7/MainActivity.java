@@ -1,8 +1,9 @@
 package de.android.android2dz7;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -34,5 +35,9 @@ public class MainActivity extends AppCompatActivity {
     public void onClickStop(View view) {
         animationDrawable.stop();
         btnStop.startAnimation(myAnimation);
+    }
+
+    public void onDrawView(View view) {
+        startActivity(new Intent(this, DrawViewActivity.class));
     }
 }
